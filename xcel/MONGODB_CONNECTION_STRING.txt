@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════════
+  MONGODB CONNECTION STRING (UPDATED)
+═══════════════════════════════════════════════════════════════
+
+✅ COMPLETE CONNECTION STRING:
+
+mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority
+
+═══════════════════════════════════════════════════════════════
+  DETAILS:
+═══════════════════════════════════════════════════════════════
+
+Username: Voterlist2
+Password: Test123 (UPDATED)
+Cluster: cluster0.ezzkjmw.mongodb.net
+Database: voterdata (you can change this if needed)
+
+═══════════════════════════════════════════════════════════════
+  ALTERNATIVE (with appName):
+═══════════════════════════════════════════════════════════════
+
+mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0
+
+═══════════════════════════════════════════════════════════════
+  FOR RENDER ENVIRONMENT VARIABLE:
+═══════════════════════════════════════════════════════════════
+
+MONGODB_URI=mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority
+
+═══════════════════════════════════════════════════════════════
+  IMPORTANT NOTES:
+═══════════════════════════════════════════════════════════════
+
+1. Make sure MongoDB Atlas Network Access allows:
+   - 0.0.0.0/0 (all IPs) OR
+   - Render's IP addresses
+
+2. Database name "voterdata" will be created automatically
+   if it doesn't exist.
+
+3. Make sure the user "Voterlist2" has read/write permissions.
+
+4. Password is case-sensitive: Test123 (capital T and capital T)
+
+═══════════════════════════════════════════════════════════════

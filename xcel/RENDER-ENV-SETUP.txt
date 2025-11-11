@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════════════
+  RENDER DEPLOYMENT - ENVIRONMENT VARIABLES SETUP
+═══════════════════════════════════════════════════════════════
+
+📋 REQUIRED ENVIRONMENT VARIABLES FOR RENDER:
+
+1. MONGODB_URI (REQUIRED)
+   ────────────────────────────────────────────────────────────
+   Your MongoDB connection string
+   
+   Format: mongodb+srv://username:password@cluster.mongodb.net/database_name?retryWrites=true&w=majority
+   
+   Example: mongodb+srv://myuser:mypass@cluster0.xxxxx.mongodb.net/voterdata?retryWrites=true&w=majority
+   
+   ⚠️  IMPORTANT: 
+   - Replace username, password, cluster URL, and database name
+   - Make sure MongoDB Atlas allows connections from 0.0.0.0/0 (all IPs)
+   - Or add Render's IP addresses to MongoDB Atlas Network Access
+
+2. NODE_ENV (OPTIONAL)
+   ────────────────────────────────────────────────────────────
+   Set to: production
+   
+   Default: production (if not set)
+
+3. PORT (OPTIONAL)
+   ────────────────────────────────────────────────────────────
+   Server port
+   
+   Default: 3000 (Render sets this automatically)
+   
+   ⚠️  Note: Render automatically sets PORT, you usually don't need this
+
+4. MAX_FILE_SIZE_MB (OPTIONAL)
+   ────────────────────────────────────────────────────────────
+   Maximum file upload size in MB
+   
+   Default: 25
+   
+   Example: 50 (for 50MB max upload)
+
+5. RENDER (OPTIONAL)
+   ────────────────────────────────────────────────────────────
+   Set to: true
+   
+   This helps the app detect it's running on Render
+   
+   ⚠️  Note: This is optional, app can auto-detect Render
+
+═══════════════════════════════════════════════════════════════
+  HOW TO ADD ENVIRONMENT VARIABLES IN RENDER:
+═══════════════════════════════════════════════════════════════
+
+1. Go to your Render Dashboard
+2. Click on your Web Service
+3. Go to "Environment" tab
+4. Click "Add Environment Variable"
+5. Add each variable:
+   - Key: MONGODB_URI
+   - Value: your_mongodb_connection_string
+6. Click "Save Changes"
+7. Render will automatically redeploy
+
+═══════════════════════════════════════════════════════════════
+  MONGODB ATLAS SETUP:
+═══════════════════════════════════════════════════════════════
+
+1. Go to MongoDB Atlas: https://www.mongodb.com/cloud/atlas
+2. Create a free cluster (if you don't have one)
+3. Create a database user:
+   - Go to "Database Access"
+   - Click "Add New Database User"
+   - Choose "Password" authentication
+   - Save username and password
+4. Get connection string:
+   - Go to "Database" → "Connect"
+   - Choose "Connect your application"
+   - Copy the connection string
+   - Replace <password> with your actual password
+   - Replace <dbname> with your database name (e.g., "voterdata")
+5. Network Access:
+   - Go to "Network Access"
+   - Click "Add IP Address"
+   - Click "Allow Access from Anywhere" (0.0.0.0/0)
+   - Or add Render's specific IPs
+
+═══════════════════════════════════════════════════════════════
+  QUICK CHECKLIST:
+═══════════════════════════════════════════════════════════════
+
+✅ MONGODB_URI is set in Render environment variables
+✅ MongoDB Atlas network access allows 0.0.0.0/0 or Render IPs
+✅ Database user has read/write permissions
+✅ Connection string has correct password and database name
+✅ Service is deployed and running
+✅ Health check endpoint works: /health
+
+═══════════════════════════════════════════════════════════════
+  TEST YOUR DEPLOYMENT:
+═══════════════════════════════════════════════════════════════
+
+1. Health Check:
+   curl https://your-service.onrender.com/health
+
+2. API Root:
+   curl https://your-service.onrender.com/
+
+3. Test Upload (use Postman or curl):
+   POST https://your-service.onrender.com/api/voters/upload
+   Content-Type: multipart/form-data
+   file: [your-excel-file.xlsx]
+
+═══════════════════════════════════════════════════════════════
+
+
