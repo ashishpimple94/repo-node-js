@@ -92,7 +92,7 @@ app.use(async (req, res, next) => {
     if (!process.env.MONGODB_URI) {
       console.error('❌ MONGODB_URI is not set in environment variables');
       const platform = process.env.VERCEL ? 'Vercel' : process.env.RENDER ? 'Render' : 'your hosting platform';
-      const connectionString = 'mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority';
+      const connectionString = 'mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0';
       
       return res.status(503).json({
         success: false,
@@ -162,7 +162,7 @@ app.use(async (req, res, next) => {
           step4: 'Verify connection string format: mongodb+srv://username:password@cluster...',
           step5: 'Try resetting database user password in MongoDB Atlas'
         },
-        connectionStringFormat: 'mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority',
+        connectionStringFormat: 'mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0',
         note: 'If password has special characters (@, #, $, etc.), they need to be URL encoded in the connection string'
       });
     } else if (error.message && error.message.includes('ENOTFOUND')) {

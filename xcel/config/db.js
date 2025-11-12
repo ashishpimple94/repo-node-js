@@ -13,7 +13,7 @@ const connectDB = async () => {
     console.error('❌ MONGODB_URI is not set in environment variables');
     console.error('📋 Please set MONGODB_URI in Vercel environment variables:');
     console.error('   Key: MONGODB_URI');
-    console.error('   Value: mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority');
+    console.error('   Value: mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0');
     throw new Error('MONGODB_URI is not set in environment variables');
   }
 

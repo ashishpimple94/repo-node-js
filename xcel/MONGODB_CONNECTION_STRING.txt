@@ -4,28 +4,28 @@
 
 ✅ COMPLETE CONNECTION STRING:
 
-mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority
+mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0
 
 ═══════════════════════════════════════════════════════════════
   DETAILS:
 ═══════════════════════════════════════════════════════════════
 
-Username: Voterlist2
-Password: Test123 (UPDATED)
-Cluster: cluster0.ezzkjmw.mongodb.net
+Username: ashishpimple94_db_user
+Password: test12345
+Cluster: cluster0.pwonikt.mongodb.net
 Database: voterdata (you can change this if needed)
 
 ═══════════════════════════════════════════════════════════════
-  ALTERNATIVE (with appName):
+  ALTERNATIVE (without appName):
 ═══════════════════════════════════════════════════════════════
 
-mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0
+mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority
 
 ═══════════════════════════════════════════════════════════════
-  FOR RENDER ENVIRONMENT VARIABLE:
+  FOR VERCEL/RENDER ENVIRONMENT VARIABLE:
 ═══════════════════════════════════════════════════════════════
 
-MONGODB_URI=mongodb+srv://Voterlist2:Test123@cluster0.ezzkjmw.mongodb.net/voterdata?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://ashishpimple94_db_user:test12345@cluster0.pwonikt.mongodb.net/voterdata?retryWrites=true&w=majority&appName=Cluster0
 
 ═══════════════════════════════════════════════════════════════
   IMPORTANT NOTES:
